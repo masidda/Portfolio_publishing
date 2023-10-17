@@ -1,0 +1,75 @@
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* layout */
+body {
+    background: #171717;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+body .en {
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+/* 페이지 스크롤바 숨김 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.wrap {
+    width: 100%;
+    position: relative;
+    overflow:hidden
+
+}
+.contents {
+    background: #000;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100vh;
+}
+
+
+
+
+/* header */
+header {display: flex; width: 100%; height: 70px; position: fixed; z-index: 2; left: 0; top: 0; background: transparent; transition: all .3s; transition-delay: .3s; transform: translate3d(0 -100px 0);}
+header .innerHeader {width: 100%; height: 100%; display: flex; justify-content: space-between; line-height: 70px;}
+header.active {transform: translateY(-100%);}
+.innerHeader .logo {width: 50px; height: 50px;}
+.innerHeader .logo img {width: 100%; height: 100%;}
+.innerHeader nav {margin-right: 50px;}
+.innerHeader ul {display: flex; text-align: center; margin-right: 50px; justify-content: space-between; width: 100%; font-weight: 200;}
+
+/* section intro */
+.intro {width: 100%; height: 100vh; overflow: hidden;}
+.intro .inner {width: 100%; height: 100vh; margin: 0 auto; text-align: center; display: flex; justify-content: center; align-items: center;}
+.intro h2 {font-size: 10.4167vw; text-transform: uppercase;}
+.intro p {font-size: 16px; color: #888; line-height: 1.6;}
+
+
+
+
+
+
+/* footer */
+footer {position: fixed; width: 100%; height: 100%; background: #171717; left: 0; bottom: 0; transform: translateZ(-1);}
+footer .menu {position: absolute;font-size: 45px; color: #888; display: flex; justify-content: space-between; width: 70%; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+footer ul li a {display: block; width: 100%; height: 100%; transition: all 0.3s;}
+footer ul li a:hover, footer li a:focus {color: #fff; transition: all 0.5s;}
+footer .copyright {position: absolute; left: 50%; bottom: 0; color: #808080; padding: 30px 0; border-top: 1px solid #333; width: 75%; display: flex; text-align: center; transform: translate(-50%); justify-content: center; font-weight: lighter;}
+footer .copyright li {padding: 0 50px;}

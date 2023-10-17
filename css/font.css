@@ -1,0 +1,81 @@
+/* Neue Machina for English */
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Ultra light'), local('Neue-Machina-Ultra-light'),
+        url('../css/neue_machina/NeueMachina-Ultralight/NeueMachina-Ultralight.woff2') format('woff2'),
+        url('../css/neue_machina/NeueMachina-Ultralight/NeueMachina-Ultralight.woff') format('woff'),
+        url('../css/neue_machina/NeueMachina-Ultralight/NeueMachina-Ultralight.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Light'), local('Neue-Machina-Light'),
+        url('../css/neue_machina/NeueMachina-Light/NeueMachina-Light.woff2') format('woff2'),
+        url('../css/neue_machina/NeueMachina-Light/NeueMachina-Light.woff') format('woff'),
+        url('../css/neue_machina/NeueMachina-Light/NeueMachina-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Regular'), local('Neue-Machina-Regular'),
+        url('../css/neue_machina/NeueMachina-Regular/NeueMachina-Regular.woff2') format('woff2'),
+        url('../css/neue_machina/NeueMachina-Regular/NeueMachina-Regular.woff') format('woff'),
+        url('../css/neue_machina/NeueMachina-Regular/NeueMachina-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Medium'), local('Neue-Machina-Medium'),
+        url('../css/neue_machina/NeueMachina-Medium/NeueMachina-Medium.woff2') format('woff2'),
+        url('../css/neue_machina/NeueMachina-Medium/NeueMachina-Medium.woff') format('woff'),
+        url('../css/neue_machina/NeueMachina-Medium/NeueMachina-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Bold'), local('Neue-Machina-Bold'),
+        url('../css/neue_machina//NeueMachina-Bold/NeueMachina-Bold.woff2') format('woff2'),
+        url('../css/neue_machina//NeueMachina-Bold/NeueMachina-Bold.woff') format('woff'),
+        url('../css/neue_machina//NeueMachina-Bold/NeueMachina-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Ultra bold'), local('Neue-Machina-Ultra-bold'),
+        url('../css/neue_machina//NeueMachina-Ultrabold/NeueMachina-Ultrabold.woff2') format('woff2'),
+        url('../css/neue_machina//NeueMachina-Ultrabold/NeueMachina-Ultrabold.woff') format('woff'),
+        url('../css/neue_machina//NeueMachina-Ultrabold/NeueMachina-Ultrabold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Black'), local('Neue-Machina-Black'),
+        url('../css/neue_machina//NeueMachina-Black/NeueMachina-Black.woff2') format('woff2'),
+        url('../css/neue_machina//NeueMachina-Black/NeueMachina-Black.woff') format('woff'),
+        url('../css/neue_machina//NeueMachina-Black/NeueMachina-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* Pretendard Variable for Korean */
+
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('../css/PretendardVariable/PretendardVariable.woff2') format('woff2-variations');
+}

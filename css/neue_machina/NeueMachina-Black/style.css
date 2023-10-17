@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Neue Machina';
+    src: local('Neue Machina Black'), local('Neue-Machina-Black'),
+        url('NeueMachina-Black.woff2') format('woff2'),
+        url('NeueMachina-Black.woff') format('woff'),
+        url('NeueMachina-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
