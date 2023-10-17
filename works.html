@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB, the space</title>
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/work.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="innerHeader">
+                <p class="logo">
+                    <img src="" alt="">
+                </p>
+                <nav>
+                    <ul class="en">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="process.html">Process</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contents">
+            <section class="intro">
+                <div class="inner">
+                    <h2 class="en">Works</h2>
+                </div>
+            </section>
+            <section class="workList">
+                <ul class="container">
+                    <li class="item item-1">
+                        <a href="#">
+                            <div class="word w1">Musign</div>
+                            <div class="img">
+                                <img src="img/musign.png" alt="">
+                            </div>
+                            <div class="word w2">Artist Company</div>
+                        </a>
+                    </li>
+                    <li class="item item-2">
+                        <a href="#">
+                            <div class="word w1">Nexon</div>
+                            <div class="img">
+                                <img src="img/nexon company.png" alt="">
+                            </div>
+                            <div class="word w2">Company</div>
+                        </a>
+                    </li>
+                    <li class="item item-3">
+                        <a href="#">
+                            <div class="word w1">Onetech</div>
+                            <div class="img">
+                                <img src="img/onetech.png" alt="">
+                            </div>
+                            <div class="word w2">Industry</div>
+                        </a>
+                    </li>
+                    <li class="item item-4">
+                        <a href="#">
+                            <div class="word w1">Daebang</div>
+                            <div class="img">
+                                <img src="img/daebang.png" alt="">
+                            </div>
+                            <div class="word w2">Industry</div>
+                        </a>
+                    </li>
+                    <li class="item item-5">
+                        <a href="#">
+                            <div class="word w1">Youtube</div>
+                            <div class="img">
+                                <img src="img/youtube music.png" alt="">
+                            </div>
+                            <div class="word w2">Music</div>
+                        </a>
+                    </li>
+                    <li class="item item-6">
+                        <a href="#">
+                            <div class="word w1">Daebang</div>
+                            <div class="img">
+                                <img src="img/daebang.png" alt="">
+                            </div>
+                            <div class="word w2">Industry</div>
+                        </a>
+                    </li>
+                    <li class="item item-7">
+                        <a href="#">
+                            <div class="word w1">Youtube</div>
+                            <div class="img">
+                                <img src="img/youtube music.png" alt="">
+                            </div>
+                            <div class="word w2">Music</div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div> 
+        <footer>
+            <ul class="menu en">
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Works
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Process
+                    </a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>© ParkDongHwi 2023</li>
+                <li>All Rights reserved</li>
+            </ul>
+        </footer>
+    </div>
+        
+
+
+    <script>
+        // DOMContentLoaded 이벤트가 발생할 때 실행
+    document.addEventListener("DOMContentLoaded", () => { 
+        // ".item" 클래스를 가진 모든 요소 선택
+        const items = document.querySelectorAll(".item");
+    
+        // 각 ".item" 요소에 대해 mouseenter 이벤트 추가
+        items.forEach((item) => {
+            item.addEventListener("mouseenter", shuffleAnimation);
+        });
+    });
+    
+    // 랜덤 문자 반환
+    function getRandomCharacter() {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        return chars[Math.floor(Math.random() * chars.length)];
+    }
+    
+    // 애니메이션 실행 함수
+    function shuffleAnimation(event) {
+        // 이벤트 발생한 대상 요소 가져오기
+        const target = event.currentTarget;
+    
+        // 이미 애니메이션이 진행중이라면 함수 종료
+        if (target.dataset.animating) {
+            return;
+        }
+    
+        // 현재 애니메이션 진행 중으로 표시하기 위해 데이터 속성을 설정합니다.
+        target.dataset.animating = true;
+    
+        // 모든 ".word" 요소 선택
+        const words = target.querySelectorAll(".word");
+    
+        // 원래 단어들을 복사하여 배열에 저장
+        const originalWords = Array.from(words).map((word) => word.textContent);
+    
+        // 셔플 횟수와 최대 셔플 횟수 초기화
+        let shuffles = 0;
+        const maxShuffles = 10;
+    
+        // 각 셔플간의 시간 간격 계산, 500/10 이므로 함수가 50ms마다 한번씩 실행된다.
+        const intervalDuration = 500 / maxShuffles;
+    
+        // 셔플 애니메이션을 위한 인터벌을 설정
+        // setInterval(콜백함수, 시간) 함수는 첫번째로 실행할 콜백 함수를 입력, 이후 실행 간격을 설정해줘야한다.
+        // 여기서는 콜백을 생략하기 때문에 빈공간으로 두고 {} 부분에 함수가 필요로 하는 작업을 조건문으로 적었음.
+        let animationInterval = setInterval(() => {
+            // 최대 셔플 횟수에 도달하면 애니메이션을 종료
+            if (shuffles >= maxShuffles) {
+                clearInterval(animationInterval);
+    
+                // 원래 단어들로 복원
+                words.forEach((word, index) => {
+                    word.textContent = originalWords[index];
+                });
+
+                // html 내에서 쓰이는 data-animate 속성을 script내에서 dataset.animating 으로 선언할 수 있다.
+                // (ex: dataset.animating: true or false; 로 선언 가능)
+
+                // 데이터 속성을 제거하여 애니메이션 진행 중이 아님을 표시
+                delete target.dataset.animating;
+            } else {
+                // 각 단어를 랜덤 문자로 바꿔서 셔플합니다.
+                words.forEach((word) => {
+                    const length = word.textContent.length;
+                    let shuffledText = "";
+                    for (let i = 0; i < length; i++) {
+                        shuffledText += getRandomCharacter();
+                    }
+                    word.textContent = shuffledText;
+                });
+                shuffles++;
+            }
+        // setinverval() 함수의 반복호출 시간 
+        }, intervalDuration);
+    }
+    </script>
+    <script>
+// lenis scroll
+    const lenis = new Lenis();
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        })
+        
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf);
+        }
+    
+        requestAnimationFrame(raf);
+    </script>
+    
+    
+</body>
+</html>

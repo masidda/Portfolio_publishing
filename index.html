@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB, the space</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="test/css" href="css/font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/jquery.simplyscroll.js"></script>
+
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="innerHeader">
+                <p class="logo">
+                    <img src="" alt="">
+                </p>
+                <nav>
+                    <ul class="en">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="#">Process</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="contents">
+            <section class="intro color" data-bgColor="#eee" data-textColor="#000">
+                <div class="video">
+                    <video muted autoplay loop>
+                        <source src="img/">
+                    </video>
+                </div>
+                <div class="inner">
+                    <h2 class="en" data-animate="motion">
+                        The WEB, a space <br>
+                        that changed Me
+                    </h2>
+                    <p>/웹, 나를 바꾼 공간</p>
+                    <p class="button en">
+                        <a href="#">
+                            Begin Journey
+                        </a>
+                    </p>
+                </div>
+                <div class="down">
+                    <div class="arrow">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                    <p class="en2">scroll down</p>
+                </div>
+            </section>
+            <section class="hello color" data-bgColor="#171717" data-textColor="#fff">
+                <div class="inner">
+                    <div class="textBox">
+                        <div class="txt en">
+                            <p>Hello,</p>
+                            <p>I'm Park Dong-Hwi,</p>
+                            <p>an flexible Web publisher</p>
+                            <p>with a passion for</p>
+                            <p>crafting engaging</p>
+                            <p>user experiences.</p>
+                            <p>Welcome to my portfolio</p>
+                        </div>
+                        <p class="button en">
+                            <a href="about.html">
+                                Read more Profile
+                            </a>
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="img/me.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="skill color" data-bgColor="#eee" data-textColor="#000">
+                <div class="inner">
+                    <h2 class="en">
+                        These are <br>
+                        my skill levels.
+                    </h2>
+                    <div class="list">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">HTML</p>
+                                    </div>
+                                    <p class="txt">
+                                        웹 표준과 접근성 준수를 위해 페이지 구조와 태그의 의미를 고려하며 마크업 하는 것을 지향합니다.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">CSS</p>
+                                    </div>
+                                    <p class="txt">
+                                        css를 통해 디자인 결과물과 일치 할 수 있도록 구현해 낼 수 있으며, <br>
+                                        반응형 웹 퍼블리싱이 가능합니다.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">JavaScript</p>
+                                    </div>
+                                    <p class="txt">
+                                        this space for test this space for test <br>
+                                        this space for test this space for test <br>
+                                        this space for test this space for test 
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="b">
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">JQuery</p>
+                                    </div>
+                                    <p class="txt">
+                                        this space for test this space for test <br>
+                                        this space for test this space for test <br>
+                                        this space for test this space for test 
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">Figma</p>
+                                    </div>
+                                    <p class="txt">
+                                        Figma를 이용한 UI / UX 설계와 프로토 타이핑이 가능합니다.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">PS / AI</p>
+                                    </div>
+                                    <p class="txt">
+                                        Photoshop, Illustrator를 이용한 디자인 및 편집 작업이 가능하며, <br>
+                                        스크롤에 반응하는 svg animation을 <br> 
+                                        구현할 수 있습니다.
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="ncs color" data-bgColor="#000" data-textColor="#fff">
+                <div class="video">
+                    <video muted autoplay loop>
+                        <source src="img/ncs.mp4">
+                    </video>
+                </div>
+                <div class="inner">
+                    <div class="textBox">
+                        <h2 class="en">NCS</h2>
+                        <p>국가직무능력표준</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist01.png" alt="">
+                                <p><span class="en">UI</span> 디자인</p>
+                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist02.png" alt="">
+                                <p><span class="en">UI</span> 구현</p>
+                                <p class="date en">23.06.23 - 23.08.21 </p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist03.png" alt="">
+                                <p><span class="en">UI</span> 테스트</p>
+                                <p class="date en">23.08.21 - 23.08.28</p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist04.png" alt="">
+                                <p><span class="en">UI / UX</span> 콘셉트 기획</p>
+                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist05.png" alt="">
+                                <p><span class="en">UI</span> 아키텍쳐 설계</p>
+                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="fadeImg" src="img/ncslist06.png" alt="">
+                                <p><span class="en">UI / UX</span> 요구 분석</p>
+                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p class="more en">
+                                    more
+                                    <span class="img">
+                                        <img src="img/upright_arrow.png" alt="">
+                                    </span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="works" data-bgColor="#171717" data-textColor="#ffff">
+                <div class="textBox">
+                    <p class="a">selected</p>
+                    <p class="b">works</p>
+                </div>
+                <p class="button en">
+                    <a href="works.html">
+                        See more works
+                    </a>
+                </p>
+                <ul class="workList a">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">Crew a La Mode</h3>
+                                <div class="imgBox">
+                                    <img src="img/crew a la mode.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">Nexon Company</h3>
+                                <div class="imgBox">
+                                    <img src="img/nexon company.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">Musign Artist Company</h3>
+                                <div class="imgBox">
+                                    <img src="img/musign.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="workList b">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">OneTech</h3>
+                                <div class="imgBox">
+                                    <img src="img/onetech.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">Youtube Music</h3>
+                                <div class="imgBox">
+                                    <img src="img/youtube music.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <h3 class="en">Daebang industry</h3>
+                                <div class="imgBox">
+                                    <img src="img/daebang.png" alt="">
+                                </div>
+                                <p>more view</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <div class="workList">
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Crew a la mode</h3>
+                            <div class="imgBox">
+                                <img src="img/crew a la mode.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Nexon Company</h3>
+                            <div class="imgBox">
+                                <img src="img/nexon company.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Musign Artist Company</h3>
+                            <div class="imgBox">
+                                <img src="img/musign.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Onetech</h3>
+                            <div class="imgBox">
+                                <img src="img/onetech.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Youtube Music</h3>
+                            <div class="imgBox">
+                                <img src="img/youtube music.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <h3 class="en">Daebang Industry</h3>
+                            <div class="imgBox">
+                                <img src="img/daebang.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+            </section>
+            <section class="gallery animate color" data-animate="motion" data-bgColor="#171717" data-textColor="#fff">
+                <ul class="scroller">
+                    <li>
+                        <img src="img/gallery/01.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/02.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/04.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/05.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/06.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/07.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/08.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/09.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/10.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/11.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/12.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/13.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/14.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/15.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/16.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/17.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/18.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/19.png" alt="">
+                    </li>
+                    <li>
+                        <img src="img/gallery/20.png" alt="">
+                    </li>
+                </ul>
+                <div class="inner">
+                    <div class="textBox">
+                        <h2 class="en">Gallery</h2>
+                        <p>갤러리에 대한 설명이 들어갈 텍스트 자리입니다. <br>
+                            갤러리에 대한 설명이 들어갈 텍스트 자리입니다.
+                        </p>
+                    </div>
+                    <p class="button en">
+                        <a href="#">
+                            See more pictures
+                        </a>
+                    </p>
+                </div>
+            </section>
+            <section class="contact color" data-bgColor="#eee" data-textColor="#000">
+                <div class="inner">
+                    <div class="top">
+                        <h2 class="en">Reach Out</h2>
+                        <div class="imgBox">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <!-- <ul class="middle">
+                        <li>
+                            <p class="title">location</p>
+                            <p>경기도 시흥시 대골길 23</p>
+                        </li>
+                        <li>
+                            <p class="title">social</p>
+                            <p class="img">
+                                <img src="" alt="">
+                            </p>
+                        </li>
+                    </ul> -->
+                    <div class="bottom en">
+                        <p>mandumeokja@naver.com</p>
+                        <p>010-3448-0177</p>
+                    </div>
+                </div>
+                <div class="stroke en">
+                    Let's WORK
+                </div>
+            </section>
+        </div>
+        <footer data-text="#ffffff">
+            <ul class="menu en">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="works.html">
+                        Works
+                    </a>
+                </li>
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="process.html">
+                        Process
+                    </a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>© ParkDongHwi 2023</li>
+                <li>All Rights reserved</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
