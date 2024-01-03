@@ -21,6 +21,12 @@ body .en {
     font-weight: 300;
 }
 
+body .en2 {
+    font-family: 'Northern Worssley';
+    font-size: 16px;
+    font-weight: normal;
+}
+
 /* 페이지 스크롤바 숨김 */
 body::-webkit-scrollbar {
     display: none;
@@ -31,6 +37,7 @@ body::-webkit-scrollbar {
     position: relative;
     overflow: hidden;
 }
+
 .contents {
     background: #eee;
     position: relative;
@@ -42,8 +49,8 @@ body::-webkit-scrollbar {
 header {display: flex; width: 100%; height: 70px; position: fixed; z-index: 2; left: 0; top: 0; background: transparent; transition: all .3s; transition-delay: .3s; transform: translate3d(0 -100px 0);}
 header .innerHeader {width: 100%; height: 100%; display: flex; justify-content: space-between; line-height: 70px;}
 header.active {transform: translateY(-100%);}
-.innerHeader .logo {width: 50px; height: 50px;}
-.innerHeader .logo img {width: 100%; height: 100%;}
+.innerHeader .logo {font-size: 12px; font-weight: bold; text-transform: uppercase; padding: 0 50px;}
+.innerHeader .logo a {display: inline-block;}
 .innerHeader nav {margin-right: 50px;}
 .innerHeader ul {display: flex; text-align: center; margin-right: 50px; justify-content: space-between; width: 100%; font-weight: 200;}
 
@@ -51,15 +58,28 @@ header.active {transform: translateY(-100%);}
 /* section intro */
 .intro {width: 100%; height: 100vh;}
 .intro .inner {width: 100%; height: 100%; margin: 0px auto; position: relative;}
-.intro .inner h2 {font-size: 10.4167vw; text-transform: uppercase; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; mix-blend-mode: difference; background: #000; color: #fff;}
-.intro .inner .img {width: 280px; height: 460px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;}
+.intro .inner h2 {font-size: 200px; text-transform: uppercase; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; mix-blend-mode: difference; background: #000; color: #fff;}
+.intro .inner .img {width: 340px; height: 560px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;}
 .intro .inner .img img {width: 100%; height: 100%;}
-.intro .inner p {position: absolute; left: 50%; bottom: 0; font-size: 20px; transform: translate(-50%,-50%); font-size: 0.83vw; line-height: 1.6;}
+.intro .inner p {position: absolute; left: 50%; bottom: 0; font-size: 16px; transform: translate(-50%,-50%); line-height: 1.6;}
+
+/* section intro2 */
+.intro2 {width: 100%; height: 100vh; color: #eee;}
+.intro2 .inner {width: 100%; height: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: center;}
+.intro2 .inner p {line-height: 1.6; font-size: 30px;font-weight: lighter;}
+.intro2 .inner p.motion { animation-name: slide-up; animation-duration: 0.7s;}
+@keyframes slide-up {
+    0% {opacity: 0; transform: translateY(70px);}
+    30% {opacity: 0; transform: translateY(70px);}
+}
+
+
+
 
 /* section words */
 .words {width: 100%; height: 100vh;}
-.words .inner {width: 90%; height: 100%; margin: 0 auto; display: flex; justify-content: center; align-items: center;}
-.words .inner .textBox {font-size: 6.25vw; font-weight: bolder;-webkit-text-stroke: 1px #fff;}
+.words .inner {width: 90%; height: 100%; margin: 0 auto; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.words .inner .textBox {font-size: 6.25vw; font-weight: bolder; -webkit-text-stroke: 1px #fff;}
 .words .inner .textBox p {
     background: linear-gradient(to right, rgb(255,255,255) 50%, rgb(17,17,17) 50%);
     background-size: 200% 100%;
@@ -68,23 +88,27 @@ header.active {transform: translateY(-100%);}
     -webkit-background-clip: text;
     color: transparent;
 }
+/* .words .inner .textBox2 {margin: 500px auto; color: #fff; font-size: 70px; word-break: keep-all;}
+.words .inner .textBox2 .bold {font-weight: lighter;} */
+
 
 
 /* section journey */
-.journey {width: 100%; height: 5000px; overflow: hidden;}
+.journey {width: 100%; height: 100%; overflow: hidden;}
 .journey .inner {width: 100%; height: 100vh; margin: 0 auto; text-align: center; display: flex; justify-content: center; align-items: center;}
 .journey h2 {font-size: 10.4167vw; text-transform: uppercase;}
 .journey p {font-size: 16px; color: #888; line-height: 1.6;}
-.journey .timeline {width: 80%; height: 2000px; margin: 0 auto;}
+.journey .timeline {width: 80%; display: flex; align-items: center; flex-direction: column; margin: 0 auto;}
 .journey .timeline li {margin: 100px 0; display: flex;}
 .journey .timeline li p {padding: 0 30px;}
 .journey .timeline .video {object-fit: cover; width: 700px; height: 470px; padding: 0 30px;}
 .journey .timeline li .textBox {font-size: 30px; font-weight: 200;}
-.journey .timeline li .textBox span {display: block; font-size: 180px; font-weight: 900; color: #000; line-height: 1;}
+.journey .timeline li .textBox span {display: block; text-align: right;}
+.journey .timeline li .textBox .number { font-size: 180px; font-weight: 900; color: #000; line-height: 1;}
+.journey .timeline li .textBox .text {font-size: 20px; color: #000; margin-top: 30px;}
 .journey .timeline li .img {width: 700px; height: 470px;}
 .journey .timeline li .img img {width: 100%; height: 100%;}
-.timeline li:nth-child(1), .timeline li:nth-child(3), .timeline li:nth-child(5) {text-align: right; float: right;}
-.timeline li:nth-child(2), .timeline li:nth-child(4) {float: left; text-align: left;}
+.journey .timeline li:nth-child(2) span, .journey .timeline li:nth-child(4) span {text-align: left;}
 
 /* journey animation */
 @keyframes up {
@@ -94,17 +118,6 @@ header.active {transform: translateY(-100%);}
 .timeline li.motion {animation-name: up; animation-duration: 0.7s;}
 
 
-/* section skills */
-.skills {width: 100%; height: 4000px; overflow: hidden;}
-.skills .inner {width: 100%; height: 100vh; margin: 0 auto; text-align: center; display: flex; justify-content: center; align-items: center;}
-.skills h2 {font-size: 10.4167vw; text-transform: uppercase;}
-.skills p {font-size: 16px; color: #888; line-height: 1.6;}
-
-/* section skills */
-.ncs {width: 100%; height: 100vh; overflow: hidden;}
-.ncs .inner {width: 100%; height: 100vh; margin: 0 auto; text-align: center; display: flex; justify-content: center; align-items: center;}
-.ncs h2 {font-size: 10.4167vw; text-transform: uppercase; color: #fff;}
-.ncs p {font-size: 16px; color: #888; line-height: 1.6;}
 
 
 

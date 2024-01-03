@@ -28,11 +28,10 @@ body::-webkit-scrollbar {
 
 .wrap {
     width: 100%;
-    position: relative;
     overflow: hidden;
 }
 .contents {
-    background: #eee;
+    background: #171717;
     position: relative;
     z-index: 1;
     margin-bottom: 100vh;
@@ -49,39 +48,50 @@ body::-webkit-scrollbar {
 header {display: flex; width: 100%; height: 70px; position: fixed; z-index: 2; left: 0; top: 0; background: transparent; transition: all .3s; transition-delay: .3s; transform: translate3d(0 -100px 0);}
 header .innerHeader {width: 100%; height: 100%; display: flex; justify-content: space-between; line-height: 70px;}
 header.active {transform: translateY(-100%);}
-.innerHeader .logo {width: 50px; height: 50px;}
-.innerHeader .logo img {width: 100%; height: 100%;}
+.innerHeader .logo {font-size: 12px; font-weight: bold; text-transform: uppercase; padding: 0 50px;}
+.innerHeader .logo a {display: inline-block;}
 .innerHeader nav {margin-right: 50px;}
 .innerHeader ul {display: flex; text-align: center; margin-right: 50px; justify-content: space-between; width: 100%; font-weight: 200;}
 
 
 /* section */
 /* intro */
-.intro {width: 100%; height: 100vh; position: relative;}
-.intro .video {position: absolute; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: brightness(40%);}
-.intro .inner {margin: 0 auto; left: 10%; top: 35%; position: relative; width: 100%;}
-.intro .inner h2 {font-size: 6.25vw; line-height: 1.2;}
-.intro .inner p {color: #888; font-size: 16px;}
-.intro .inner .button {position: absolute;  color: #fff; right: 20%; margin: 3% 0;}
-.intro .inner .button a {display: block; width: 100%; height: 100%; background: #171717; text-align: center; font-weight: lighter;}
-.intro .down {position: absolute; left: 70px; bottom:20%; rotate: -90deg; text-transform: uppercase; font-size: 12px;}
-/* intro end */
+.visual {width: 100%; height: 100vh; position: relative; overflow: hidden;}
+.visual .video {position: absolute; width: 100vw; height: 100vh; filter: brightness(200%);}
+.visual .video video {width: 100%; height: 100%; object-fit: cover;}
+.visual .inner {margin: 0 auto; position: relative; width: 80%; top: 35%;}
+.visual .inner h2 {font-size: 6.25vw; line-height: 1.2;}
+.visual .inner p {color: #171717; font-size: 16px;}
+/* .visual .inner .button {position: absolute;  color: #fff; right: 20%; margin: 3% 0;}
+.visual .inner .button a {display: block; width: 100%; height: 100%; background: #171717; text-align: center; font-weight: lighter;} */
+.visual .scroll {position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -50%); text-transform: uppercase; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.visual .scroll p {font-size: 14px;}
 
+/* visual arrow */
+.visual .arrow {position: relative; width: 42px; height: 16px; opacity: 0; padding: 30px 0;}
+.visual .arrow:before, .visual .arrow:after {content: ''; width: 21px; height: 2px; background: #171717; border-radius: 2px; display: inline-block;}
+.visual .arrow:before {transform: rotate(45deg) translateX(25%);}
+.visual .arrow:after {transform: rotate(-45deg) translateX(-25%);}
+.visual .arrow:nth-child(1) {top: -50px; opacity: 1; animation: arrow2 1s ease 0s infinite;}    
+.visual .arrow:nth-child(2) {top: -25px; animation: arrow1 1s ease 0.25s infinite;}
+@keyframes arrow1 {
+    from {opacity: 0; top: -25px;}
+    to {opacity: 0; top: 0px;}
+    50% {opacity: 1;}
+}
 
 /* intro animation */
-.intro .inner h2.motion {animation-name: test; animation-duration: 1.2s;}
+.visual .inner h2.motion {animation-name: test; animation-duration: 1.2s;}
 
 @keyframes test {
     0% {opacity: 0; margin-left: -100px;}
     30% {opacity: 0; margin-left: -100px;}
 }
-
+/* intro end */
 
 /* hello */
-.hello {width: 100%; height: 130vh; color: #fff;}
-.hello .inner {margin: 0 auto; position: relative; padding: 200px 0; width: 80%;}
-.hello .inner .textBox {float: left;}
-
+.hello {width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;}
+.hello .inner {margin: 0px auto; position: relative; width: 80%; display: flex; flex-direction: row; justify-content: space-between;}
 .hello .inner .textBox .txt p {
     background: linear-gradient(to right, rgb(255,255,255) 50%, rgb(37,37,37) 50%);
     background-size: 200% 100%;
@@ -95,77 +105,76 @@ header.active {transform: translateY(-100%);}
 .hello .inner .textBox .button {color: #fff; margin-top: 120px; border: 1px solid #fff;}
 .hello .inner .textBox .button a {display: block; width: 100%; height: 100%; background:#171717; text-align: center; font-weight: lighter;}
 /* .hello .inner .imgBox {float: right; width: 400px; height: 660px;} */
-.hello .inner .imgBox {float: right; width: 20.83vw; height: 34.37vw;}
+.hello .inner .imgBox {width: 20.83vw; height: 34.37vw;}
 .hello .inner .imgBox img {width: 100%; height: 100%;}
 /* hello end */
 
 
 
 /* skill */
-.skill {width: 100%; height: 120vh; padding: 100px 0;}
+.skill {width: 100%; height: 120vh; padding: 100px 0; }
 .skill .inner {margin: 0px auto; width: 80%;  height: 100%;}
-.skill .inner h2 {font-size: 80px; font-weight: 300;}
+.skill .inner h2 {font-size: 80px; font-weight: 300; color: #171717;}
 
 /* card 공통 layout */
-.skill .inner .list {margin: 0 auto; width: 100%; height: 100%; position: relative;}
-.skill .inner .list .a {position: absolute; left: 0; top: 15%; display: flex; justify-content: space-between; width: 900px;}
-.skill .inner .list .b {position: absolute; bottom: 15%; right: 0; display: flex; justify-content: space-between; width: 900px;}
-.skill ul li {width: 280px; height: 280px; background: #fff;}
+.skill .inner .list {margin: 0 auto; width: 100%; height: 100%; display: flex; flex-direction: column;  align-items: center;}
+.skill .inner .list .a {left: 0;  display: flex; justify-content: space-between; width: 60%; padding: 100px 0;}
+.skill .inner .list .b {right: 0; display: flex; justify-content: space-between; width: 60%;}
+.skill ul li {width: 400px; height: 400px; border: 1px solid #000;}
 .skill ul li a {display: block; width: 100%; height: 100%; transition: all 0.5s;  padding: 40px 30px;}
-.skill ul li a:hover, .skill ul li a:focus {background: black; color: #fff; transition: all 0.5s;}
-.skill ul li a .title {margin-bottom: 100px; display: flex; justify-content: space-between;}
+.skill ul li a:hover, .skill ul li a:focus {background: black; color: #fff; border: 1px solid #eee; transition: all 0.5s;}
+.skill ul li a .title {margin-bottom: 80px; display: flex; justify-content: space-between;}
 .skill ul li a .title .en {font-weight: 900; font-size: 20px;}
 .skill ul li a .txt {word-break: keep-all;}
 .skill ul li a .title .img {width: 18px; height: 18px; position: relative;}
 .skill ul li a .title .img img {width: 100%; height: 100%;}
 .skill ul li a .title .img img:nth-child(2) {position: absolute; right: 0; top: 0; display: none;}
-.skill ul li a .txt {font-size: 14px; font-weight: 300; color: #888; line-height: 1.6;}
+.skill ul li a .txt {font-size: 14px; font-weight: 300; line-height: 1.6;}
 /* skill end */
 
 
 /* ncs */
-.ncs {width: 100%; height: 100vh; color: #fff; display: flex; align-items: center; justify-content: center; padding: 100px 0; position: relative;}
+.ncs {width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 100px 0;}
 .ncs .video {position: absolute; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: brightness(40%);}
-.ncs .video video {width: 100%; height: 100%;}
-.ncs .inner {margin: 0 auto; width: 80%; height: 100%; z-index: 2;}
+.ncs .video video {width: 100%; height: 100%; object-fit: cover;}
+.ncs .inner {margin: 0 auto; width: 80%; height: 100%; z-index: 2; display: flex; flex-direction: column; justify-content: center; }
 .ncs .inner .textBox {text-align: right; margin-bottom: 50px;}
-.ncs .inner .textBox h2 {font-size: 80px;}
+.ncs .inner .textBox h2 {font-size: 80px; color: #eee;}
 .ncs .inner .textBox p {font-size :20px; font-weight: lighter; color: #888;}
-.ncs .inner ul {width: 100%;}
-.ncs .inner ul li {border-bottom: 1px solid #fff;}
+.ncs .inner ul {width: 100%; color: #eee;}
+.ncs .inner ul li {border-bottom: 1px solid #eee;}
 .ncs .inner ul li a {width: 100%; height: 100%; display: flex; padding: 40px 0; position: relative; transition: all 0.3s;}
 .ncs .inner ul li a .date {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 .ncs .inner ul li a .more {position: absolute; right: 0; text-transform: uppercase;}
 .ncs .inner ul li a .more .img {display: inline-block; width: 11px; height: 11px;}
 .ncs .inner ul li a .more .img img {width: 100%; height: 100%;}
-.ncs .inner ul li a .fadeImg {position: fixed; left: 0; top: 0; width: 350px; height: 220px; opacity: 0; object-fit: cover; z-index: 100;}
+.ncs .inner ul li a .fadeImg {position: fixed; left: 0; top: 0; width: 350px; height: 220px; opacity: 0; object-fit: cover; z-index: 100; pointer-events: none;}
 /* .ncs .inner ul li a:hover .fadeImg {opacity: 1; z-index: 10;} */
 /* ncs end */
 
 
 /* works */
-.works {width: 100%; height: 300vh; color: #fff;}
-.works .textBox {margin: 0 auto; text-align: center; padding-top: 30vh; margin-bottom: 50px;}
-.works .textBox .a {text-transform: uppercase; font-size: 7.3vw;}
-.works .textBox .b {text-transform: uppercase; font-size: 7.3vw; font-style: italic;}
+.works {width: 100%; color: #fff; padding-top: 200px;}
+.works .textBox {margin: 0 auto; text-align: center; margin-bottom: 50px; text-transform: uppercase; font-size: 7.3vw; color: #eee;}
+.works .textBox .b {font-style: italic;}
 .works .button {color: #fff; border: 1px solid #fff; margin: 0 auto;}
 .works .button a {display: block; width: 100%; height: 100%; background: black; text-align: center; font-weight: lighter;}
-.works .workList {width: 100%; display: flex; flex-wrap: nowrap; justify-content: space-between;}
-.works .workList li {padding: 100px 0; margin: 100px auto; text-align: center;}
-.works .workList li:nth-child(2), .works .workList li:nth-child(5) {margin-top: 400px;}
+.works .workList {width: 100%; margin: 0px auto; display: flex; flex-wrap: wrap; justify-content: space-between; flex-direction: row; align-items: center; justify-content: center;}
+.works .workList li {padding: 140px; text-align: center;}
+.works .workList li:nth-child(2), .works .workList li:nth-child(5) {margin-top: 300px;}
 .works .workList li a {display: contents; width: 100%; height: 100%;}
 .works .workList li a h3 {font-size: 20px; text-transform: uppercase; text-align: left; margin-bottom: 10px;}
 .works .workList li a p {display: block;  font-size: 14px; text-align: right; text-transform: uppercase; opacity: 0; padding: 10px 0; transition: all 0.3s;}
 .works .workList li a:hover p {opacity: 1; transition: all 0.3s;}
 .works .workList li a div {transition: all 0.5s;}
 .works .workList li a:hover div {scale: 1.03; transition: all 0.5s;}
-.works .workList.a li:first-child a .imgBox {width: 250px; height: 350px;} /* width: 250px;, height: 350px; */
-.works .workList.a li:nth-child(2) a .imgBox {width: 370px; height: 560px;}  /* width: 370px;, height: 560px; */
-.works .workList.a li:last-child a .imgBox {width: 300px; height: 400px;}  /* width: 300px;, height: 400px; */
-.works .workList.b li:first-child a .imgBox {width: 300px; height: 460px;}  /* width: 300px;, height: 460px; */
-.works .workList.b li:nth-child(2) a .imgBox {width: 300px; height: 450px;}  /* width: 300px;, height: 450px; */
-.works .workList.b li:last-child a .imgBox {width: 300px; height: 400px;}  /* width: 300px;, height: 400px; */
-.works .workList li a .imgBox {width: 100%; height: 100%;}
+.works .workList li a .imgBox {width: 300px; height: 450px;}
+/* .works .workList.a li:first-child a .imgBox {width: 250px; height: 350px;}
+.works .workList.a li:nth-child(2) a .imgBox {width: 370px; height: 560px;}
+.works .workList.a li:last-child a .imgBox {width: 300px; height: 400px;}
+.works .workList.b li:first-child a .imgBox {width: 300px; height: 460px;}
+.works .workList.b li:nth-child(2) a .imgBox {width: 300px; height: 450px;}
+.works .workList.b li:last-child a .imgBox {width: 300px; height: 400px;}   */
 .works .workList li a .imgBox img {width: 100%; height: 100%;}
 /* works end */
 
@@ -173,18 +182,16 @@ header.active {transform: translateY(-100%);}
 
 
 /* gallery */
-.gallery {width: 100%; height: 200vh; padding: 400px 0;}
-.gallery .inner {width: 80%;  margin: 0 auto;}
-.gallery .inner .textBox {width: 38%; position: relative;}
-.gallery .inner .textBox h2 {font-size: 8.33vw; color: #eee;}
-.gallery .inner .textBox p {position: absolute; right: 0; margin-top: 30px; font-size: 20px; color: #888;}
-.gallery .inner .button {color: #fff; float: right; margin-top: 100px; border: 1px solid #fff;}
-.gallery .inner .button a {display: block; width: 100%; height: 100%; background: black; text-align: center; font-weight: lighter;}
-
+.gallery {width: 100%; height: 100vh; display: flex; justify-content: center; flex-direction: column;}
+.gallery .inner {width: 80%;  margin: 240px auto; position: relative;}
+.gallery .inner .textBox {width: 600px;}
+.gallery .inner .textBox h2 {font-size: 160px; color: #eee;}
+.gallery .inner .textBox p {text-align: right; margin-top: 30px; font-size: 20px; color: #eee;}
+.gallery .inner .button {position: absolute; color: #eee; right: 0; margin-top: 100px; border: 1px solid #eee;}
+.gallery .inner .button a {display: block; width: 100%; height: 100%; background: #171717; text-align: center; font-weight: lighter;}
 
 /* gallery simply Scroll */
-.simply-scroll-container {margin-bottom: 600px;}
-.simply-scroll .simply-scroll-clip {overflow: hidden; transform: rotate(5deg) translate(150%, 400px) scale(1.1); opacity: 0;}
+.simply-scroll .simply-scroll-clip {overflow: hidden; transform: rotate(5deg) translate(150%, 150px) scale(1.1); opacity: 0;}
 .simply-scroll .simply-scroll-clip .simply-scroll-list li {float: left; width: 190px; height: 250px; margin: 0 5px; filter: saturate(50%)}
 .simply-scroll .simply-scroll-clip .simply-scroll-list li:nth-child(1) {width: 340px; height: 250px;}
 .simply-scroll .simply-scroll-clip .simply-scroll-list li:nth-child(12) {width: 330px; height: 250px;}
@@ -193,7 +200,7 @@ header.active {transform: translateY(-100%);}
 .simply-scroll .simply-scroll-clip .simply-scroll-list li:nth-child(20) {width: 470px; height: 250px;}
 
 .simply-scroll .simply-scroll-clip .simply-scroll-list li img {width: 100%;}
-.gallery.motion .simply-scroll .simply-scroll-clip {transform:rotate(7.8deg) translate(0%, 400px) scale(1.1); opacity: 1; transition: 1.2s; transition-delay: 0.3s;}
+.gallery.motion .simply-scroll .simply-scroll-clip {transform:rotate(5deg) translate(0%, 150px) scale(1.1); opacity: 1; transition: 1.2s; transition-delay: 0.3s;}
 /* gallery end */
 
 
@@ -201,13 +208,13 @@ header.active {transform: translateY(-100%);}
 .contact {width: 100%; height: 100vh; position: relative;}
 .contact .inner {width: 80%; margin: 0 auto; padding: 200px 0 0;}
 .contact .inner .top {display: flex; justify-content: space-between;}
-.contact .inner .top h2 {font-size: 8.33vw;}
+.contact .inner .top h2 {font-size: 8.33vw; color: #171717;}
 .contact .inner .top .imgBox {width: 120px; height: 160px;}
 .contact .inner .top .imgBox img {width: 100%; height: 100%;}
 .contact .inner .middle {display: flex;}
 .contact .inner .middle .title {font-weight: bold; font-size: 1.04vw; color: #888;}
 .contact .inner .middle p {font-weight: lighter; font-size: 0.83; color: #888;}
-.contact .inner .bottom {float: right; text-align: right;}
+.contact .inner .bottom {float: right; text-align: right; color: #171717;}
 .contact .inner .bottom p {font-size: 3.65vw; padding: 10px 0;}
 .contact .stroke {
     position: absolute;
@@ -247,9 +254,10 @@ footer .copyright li {padding: 0 50px;}
 
 /* responsive web */
 @media screen and (max-width: 1650px) {
+    /* intro */
 
-/* skill */
-    .skill .inner h2 {font-size: 4.84vw;}
+    /* skill */
+    /* .skill .inner h2 {font-size: 4.84vw;}
     .skill .inner .list {width: 54.54vw;}
     .skill .inner .list .a {width: 54.54vw; left: 0; top: 17%;}
     .skill .inner .list .b {width: 54.54vw; right: 0; bottom: 17%;}
@@ -258,22 +266,26 @@ footer .copyright li {padding: 0 50px;}
     .skill ul li a .title {margin-bottom: 45%;}
     .skill ul li a .title .en {font-weight: 900; font-size: 1.21vw;}
     .skill ul li a .title .img {width: 1.1vw; height: 1.1vw;}
-    .skill ul li a .txt {font-size: 0.84vw; line-height: 1.6;}
+    .skill ul li a .txt {font-size: 0.84vw; line-height: 1.6;} */
 
+
+    /* works */
+    .works {padding: 200px 0;}
+    .works .workList {margin: 0 auto;}
+    .works .workList li a h3 {font-size: 20px;}
+    .works .workList li:nth-child(2), .works .workList li:nth-child(5) {margin-top: 0;}
 /* ncs */
-    .ncs .inner .textBox h2 {font-size: 4.84vw;}
+    /* .ncs .inner .textBox h2 {font-size: 4.84vw;} */
 
-/* gallery */
-    .gallery .inner .textBox p {font-size: 1.21vw;}
 
 /* contact */
     .contact .stroke {bottom: -7%;}
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
 
     /* skill */
-    .skill .inner h2 {font-size: 4.84vw;}
+    /* .skill .inner h2 {font-size: 60px;}
     .skill .inner .list {width: 54.54vw;}
     .skill .inner .list .a {width: 54.54vw; left: 0; top: 22%;}
     .skill .inner .list .b {width: 54.54vw; right: 0; bottom: 22%;}
@@ -282,20 +294,18 @@ footer .copyright li {padding: 0 50px;}
     .skill ul li a .title {margin-bottom: 45%;}
     .skill ul li a .title .en {font-weight: 900; font-size: 1.21vw;}
     .skill ul li a .title .img {width: 1.1vw; height: 1.1vw;}
-    .skill ul li a .txt {font-size: 0.84vw; line-height: 1.6;}
+    .skill ul li a .txt {font-size: 0.84vw; line-height: 1.6;} */
 
 
     /* works */
-    .works .workList li {margin: 0 auto;}
+    .works .workList {margin: 100px auto;}
     .works .workList li a h3 {font-size: 20px;}
     .works .workList li:nth-child(2), .works .workList li:nth-child(5) {margin-top: 0;}
-    .works .workList.a li:first-child a .imgBox {width: 250px; height: 350px;} 
-    .works .workList.a li:nth-child(2) a .imgBox {width: 250px; height: 350px;}
-    .works .workList.a li:last-child a .imgBox {width: 250px; height: 350px;}  
-    .works .workList.b li:first-child a .imgBox {width: 250px; height: 350px;}
-    .works .workList.b li:nth-child(2) a .imgBox {width: 250px; height: 350px;}
-    .works .workList.b li:last-child a .imgBox {width: 250px; height: 350px;}  
 
+    /* gallery */
+    .gallery .inner .textBox {width: 380px;}
+    .gallery .inner .textBox h2 {font-size: 100px;}
+    .gallery .inner .textBox p {font-size: 16px;}
     /* contact */
     .contact .stroke {bottom: -5%;}
 
@@ -305,8 +315,19 @@ footer .copyright li {padding: 0 50px;}
 
 
 @media screen and (max-width: 1024px) {
+
+    /* hello */
+    .hello .inner .imgBox {width: 210px; height: 350px;}
+
+    /* skill */
+    .skill .inner h2 {font-size: 60px;}
+    .skill ul li {width: 260px; height: 260px;}
+    .skill ul li a .txt {font-size: 12px;}
+    /* .skill ul li {width: 280px; height: 280px; background: #fff;} */
+
     /* ncs */
     .ncs ul li a .date {opacity: 0;}
+
 
     /* contact */
     .contact .stroke {bottom: -4%;}
@@ -317,28 +338,44 @@ footer .copyright li {padding: 0 50px;}
 
 
 @media screen and (max-width: 768px) {
+
+    /* hello */
+    .hello .inner {flex-direction: column-reverse; justify-content: center; align-items: center; padding: 0;}
+    .hello .inner .imgBox {margin-bottom: 30px; width: 180px; height: 300px;}
+    .hello .inner .textBox .txt p  {font-size: 30px; line-height: 1.2;}
+    .hello .inner .textBox .button {margin: 50px auto;}
+    
+    /* skill */
+    .skill .inner h2 {font-size: 50px;}
+    .skill ul li {width: 250px; height: 250px;}
+    .skill .inner .list .a, .skill .inner .list .b {width: 800px;}
+    /* ncs */
+    .ncs .inner ul li a {padding: 30px 0;}
+    .ncs .inner ul p, .ncs .inner ul span  {font-size: 14px;}
+
+    /* works */
+    .works .textBox {font-size: 70px;}
+    .works .workList {margin: 100px auto;}
+
+    /* contact */
     .contact .stroke {bottom: -2.5%;}
+
+    /* footer */
     footer .menu {display: block; margin: 0 auto; text-align: center;}
     footer .menu li {margin: 50px 0;}
     footer .copyright {width: 80%; font-size: 10px;}
 }
 
 @media screen and (max-width: 480px) {
+    /* skill */
+    .skill .inner h2 {font-size: 40px;}
+
     /* works */
-    .works .textBox {padding-top: 10vh;}
     .works .button {margin: 50px auto;}
-    .works .workList {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    .works .workList li {margin: 15px auto; padding: 0;}
+    .works .textBox {padding-top: 0;}
+    .works .workList li {margin: 10px auto;}
     .works .workList li:nth-child(2), .works .workList li:nth-child(5) {margin-top: 0;}
-    .works .workList.a li:nth-child(2) a .imgBox, .works .workList.b li:nth-child(2) a .imgBox {width: 200px; height: 300px;}
-    .works .workList.a li:first-child a .imgBox, .works .workList.a li:last-child a .imgBox {width: 200px; height: 300px;}
-    .works .workList.b li:first-child a .imgBox, .works .workList.b li:last-child a .imgBox {width: 200px; height: 300px;}
+    .works .workList li a .imgBox {width: 200px; height: 300px;}
     .works .workList .imgBox img {width: 100%; height: 100%;}
 }
 

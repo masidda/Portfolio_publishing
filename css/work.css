@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
 
 }
 .contents {
-    background: #000;
+    background: #171717;
     position: relative;
     z-index: 1;
     margin-bottom: 100vh;
@@ -50,8 +50,8 @@ body::-webkit-scrollbar {
 header {display: flex; width: 100%; height: 70px; position: fixed; z-index: 2; left: 0; top: 0; background: transparent; transition: all .3s; transition-delay: .3s; transform: translate3d(0 -100px 0);}
 header .innerHeader {width: 100%; height: 100%; display: flex; justify-content: space-between; line-height: 70px;}
 header.active {transform: translateY(-100%);}
-.innerHeader .logo {width: 50px; height: 50px;}
-.innerHeader .logo img {width: 100%; height: 100%;}
+.innerHeader .logo {font-size: 12px; font-weight: bold; text-transform: uppercase; padding: 0 50px;}
+.innerHeader .logo a {display: inline-block;}
 .innerHeader nav {margin-right: 50px;}
 .innerHeader ul {display: flex; text-align: center; margin-right: 50px; justify-content: space-between; width: 100%; font-weight: 200;}
 
@@ -64,7 +64,7 @@ header.active {transform: translateY(-100%);}
 
 /* section workList */
 .workList{
-    background: #000;
+    background: #171717;
     font-family: 'Neue Machina', sans-serif;
     overflow: hidden;
     color: #fff;
