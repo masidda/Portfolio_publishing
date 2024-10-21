@@ -12,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="js/jquery.simplyscroll.js"></script>
-
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -20,7 +19,7 @@
         <header>
             <div class="innerHeader">
                 <p class="logo">
-                    <img src="" alt="">
+                    <a href="index.html">parkdonghwi</a>
                 </p>
                 <nav>
                     <ul class="en">
@@ -28,47 +27,43 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="#">About</a>
                         </li>
                         <li>
-                            <a href="works.html">Works</a>
+                            <a href="#">Works</a>
                         </li>
                         <li>
-                            <a href="gallery.html">Gallery</a>
+                            <a href="#">Gallery</a>
                         </li>
                         <li>
-                            <a href="#">Process</a>
+                            <a href="img/portfolio.pdf">Process</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
         <div class="contents">
-            <section class="intro color" data-bgColor="#eee" data-textColor="#000">
+            <section class="visual color" data-bgColor="#eee" data-textColor="#000">
                 <div class="video">
                     <video muted autoplay loop>
-                        <source src="img/">
+                        <source src="img/intro.mp4">
                     </video>
                 </div>
                 <div class="inner">
                     <h2 class="en" data-animate="motion">
-                        The WEB, a space <br>
+                        The WEB, a space<br>
                         that changed Me
                     </h2>
                     <p>/웹, 나를 바꾼 공간</p>
-                    <p class="button en">
+                    <!-- <p class="button en">
                         <a href="#">
                             Begin Journey
                         </a>
-                    </p>
+                    </p> -->
                 </div>
-                <div class="down">
-                    <div class="arrow">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
+                <div class="scroll">
                     <p class="en2">scroll down</p>
+                    <div class="arrow"></div>
                 </div>
             </section>
             <section class="hello color" data-bgColor="#171717" data-textColor="#fff">
@@ -77,7 +72,7 @@
                         <div class="txt en">
                             <p>Hello,</p>
                             <p>I'm Park Dong-Hwi,</p>
-                            <p>an flexible Web publisher</p>
+                            <p>become a IOS Developer</p>
                             <p>with a passion for</p>
                             <p>crafting engaging</p>
                             <p>user experiences.</p>
@@ -105,21 +100,10 @@
                             <li>
                                 <a href="#">
                                     <div class="title">
-                                        <p class="en">HTML</p>
+                                        <p class="en">HTML / CSS</p>
                                     </div>
                                     <p class="txt">
-                                        웹 표준과 접근성 준수를 위해 페이지 구조와 태그의 의미를 고려하며 마크업 하는 것을 지향합니다.
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="title">
-                                        <p class="en">CSS</p>
-                                    </div>
-                                    <p class="txt">
-                                        css를 통해 디자인 결과물과 일치 할 수 있도록 구현해 낼 수 있으며, <br>
-                                        반응형 웹 퍼블리싱이 가능합니다.
+                                        웹 표준과 접근성 준수를 위해 페이지 구조와 태그의 의미를 고려하며 마크업 하는 것을 지향하며, css를 통해 디자인 결과물과 일치 할 수 있도록 구현해 낼 수 있습니다.
                                     </p>
                                 </a>
                             </li>
@@ -129,9 +113,17 @@
                                         <p class="en">JavaScript</p>
                                     </div>
                                     <p class="txt">
-                                        this space for test this space for test <br>
-                                        this space for test this space for test <br>
-                                        this space for test this space for test 
+                                        삼항연산자를 이용한 조건문 작성, 화살표함수를 이용한 스크립트, ScrollTrigger를 통해 <br> 각종 Animation 구현이 가능합니다.
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="title">
+                                        <p class="en">Vue</p>
+                                    </div>
+                                    <p class="txt">
+                                        Vue3 Composition API를 통해 Vue3 컴포넌트를 조직하고 상태와 동작을 관리할 수 있으며, v-if 디렉티브를 통한 조건부 렌더링 수행, @event를 사용한 이벤트를 구현할 수 있습니다.
                                     </p>
                                 </a>
                             </li>
@@ -143,9 +135,7 @@
                                         <p class="en">JQuery</p>
                                     </div>
                                     <p class="txt">
-                                        this space for test this space for test <br>
-                                        this space for test this space for test <br>
-                                        this space for test this space for test 
+                                        .on 클래스를 이용한 mouseevent, .active 클래스를 이용한 header 숨기기, scrolla.js를 이용한 animation을 구현할 수 있습니다.
                                     </p>
                                 </a>
                             </li>
@@ -155,7 +145,7 @@
                                         <p class="en">Figma</p>
                                     </div>
                                     <p class="txt">
-                                        Figma를 이용한 UI / UX 설계와 프로토 타이핑이 가능합니다.
+                                        Figma를 이용한 UI / UX 기획 및 설계, <br> Prototype을 구현할 수 있습니다.
                                     </p>
                                 </a>
                             </li>
@@ -165,7 +155,7 @@
                                         <p class="en">PS / AI</p>
                                     </div>
                                     <p class="txt">
-                                        Photoshop, Illustrator를 이용한 디자인 및 편집 작업이 가능하며, <br>
+                                        Photoshop, Illustrator를 통해 <br> 간단한 디자인 및 편집 작업이 가능하며, <br>
                                         스크롤에 반응하는 svg animation을 <br> 
                                         구현할 수 있습니다.
                                     </p>
@@ -175,15 +165,16 @@
                     </div>
                 </div>
             </section>
-            <section class="ncs color" data-bgColor="#000" data-textColor="#fff">
+            <section class="ncs color" data-bgColor="#171717" data-textColor="#fff">
                 <div class="video">
                     <video muted autoplay loop>
-                        <source src="https://www.dropbox.com/scl/fi/qfmdja505ck4nm68irdqe/ncs.mp4?rlkey=0rnzk9zlxdquo7dopsctyojwp&dl=0">
+                        <source src="img/ncs.mp4">
                     </video>
                 </div>
                 <div class="inner">
                     <div class="textBox">
                         <h2 class="en">NCS</h2>
+                        
                         <p>국가직무능력표준</p>
                     </div>
                     <ul>
@@ -203,8 +194,8 @@
                         <li>
                             <a href="#">
                                 <img class="fadeImg" src="img/ncslist02.png" alt="">
-                                <p><span class="en">UI</span> 구현</p>
-                                <p class="date en">23.06.23 - 23.08.21 </p>
+                                <p><span class="en">UI</span> 구현 & 테스트</p>
+                                <p class="date en">23.06.23 - 23.08.28 </p>
                                 <p class="more en">
                                     more
                                     <span class="img">
@@ -216,8 +207,8 @@
                         <li>
                             <a href="#">
                                 <img class="fadeImg" src="img/ncslist03.png" alt="">
-                                <p><span class="en">UI</span> 테스트</p>
-                                <p class="date en">23.08.21 - 23.08.28</p>
+                                <p><span class="en">UI / UX</span> 콘셉트 기획</p>
+                                <p class="date en">23.08.28 - 23.09.04</p>
                                 <p class="more en">
                                     more
                                     <span class="img">
@@ -229,8 +220,8 @@
                         <li>
                             <a href="#">
                                 <img class="fadeImg" src="img/ncslist04.png" alt="">
-                                <p><span class="en">UI / UX</span> 콘셉트 기획</p>
-                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p><span class="en">UI / UX</span> 아키텍처 설계, 요구분석</p>
+                                <p class="date en">23.09.04 - 23.09.18</p>
                                 <p class="more en">
                                     more
                                     <span class="img">
@@ -242,8 +233,8 @@
                         <li>
                             <a href="#">
                                 <img class="fadeImg" src="img/ncslist05.png" alt="">
-                                <p><span class="en">UI</span> 아키텍쳐 설계</p>
-                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p>개발자 환경 구축, 프로그래밍 언어 활용</p>
+                                <p class="date en">23.09.18 - 23.10.12</p>
                                 <p class="more en">
                                     more
                                     <span class="img">
@@ -255,8 +246,8 @@
                         <li>
                             <a href="#">
                                 <img class="fadeImg" src="img/ncslist06.png" alt="">
-                                <p><span class="en">UI / UX</span> 요구 분석</p>
-                                <p class="date en">23.05.04 - 23.06.23</p>
+                                <p>애플리케이션 배포, 테스트 수행</p>
+                                <p class="date en">23.10.12 - 23.10.20</p>
                                 <p class="more en">
                                     more
                                     <span class="img">
@@ -268,17 +259,12 @@
                     </ul>
                 </div>
             </section>
-            <section class="works" data-bgColor="#171717" data-textColor="#ffff">
+            <section class="works" data-bgColor="#171717" data-textColor="#fff">
                 <div class="textBox">
                     <p class="a">selected</p>
                     <p class="b">works</p>
                 </div>
-                <p class="button en">
-                    <a href="works.html">
-                        See more works
-                    </a>
-                </p>
-                <ul class="workList a">
+                <ul class="workList">
                     <li>
                         <a href="#">
                             <div>
@@ -305,7 +291,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <h3 class="en">Musign Artist Company</h3>
+                                <h3 class="en">Musign</h3>
                                 <div class="imgBox">
                                     <img src="img/musign.png" alt="">
                                 </div>
@@ -313,8 +299,6 @@
                             </div>
                         </a>
                     </li>
-                </ul>
-                <ul class="workList b">
                     <li>
                         <a href="#">
                             <div>
@@ -349,56 +333,11 @@
                         </a>
                     </li>
                 </ul>
-                <!-- <div class="workList">
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Crew a la mode</h3>
-                            <div class="imgBox">
-                                <img src="img/crew a la mode.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Nexon Company</h3>
-                            <div class="imgBox">
-                                <img src="img/nexon company.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Musign Artist Company</h3>
-                            <div class="imgBox">
-                                <img src="img/musign.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Onetech</h3>
-                            <div class="imgBox">
-                                <img src="img/onetech.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Youtube Music</h3>
-                            <div class="imgBox">
-                                <img src="img/youtube music.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="list">
-                        <a href="#">
-                            <h3 class="en">Daebang Industry</h3>
-                            <div class="imgBox">
-                                <img src="img/daebang.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
+                <p class="button en">
+                    <a href="works.html">
+                        See more works
+                    </a>
+                </p>
             </section>
             <section class="gallery animate color" data-animate="motion" data-bgColor="#171717" data-textColor="#fff">
                 <ul class="scroller">
@@ -466,9 +405,7 @@
                 <div class="inner">
                     <div class="textBox">
                         <h2 class="en">Gallery</h2>
-                        <p>갤러리에 대한 설명이 들어갈 텍스트 자리입니다. <br>
-                            갤러리에 대한 설명이 들어갈 텍스트 자리입니다.
-                        </p>
+                        <p>평소에 사진찍기를 좋아하는 저의 공간 입니다. </p>
                     </div>
                     <p class="button en">
                         <a href="#">
@@ -481,9 +418,9 @@
                 <div class="inner">
                     <div class="top">
                         <h2 class="en">Reach Out</h2>
-                        <div class="imgBox">
+                        <!-- <div class="imgBox">
                             <img src="" alt="">
-                        </div>
+                        </div> -->
                     </div>
                     <!-- <ul class="middle">
                         <li>
@@ -507,7 +444,7 @@
                 </div>
             </section>
         </div>
-        <footer data-text="#ffffff">
+        <footer data-textColor="#fff">
             <ul class="menu en">
                 <li>
                     <a href="index.html">
@@ -515,28 +452,28 @@
                     </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="#">
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="works.html">
+                    <a href="#">
                         Works
                     </a>
                 </li>
                 <li>
-                    <a href="gallery.html">
+                    <a href="#">
                         Gallery
                     </a>
                 </li>
                 <li>
-                    <a href="process.html">
+                    <a href="#">
                         Process
                     </a>
                 </li>
             </ul>
             <ul class="copyright">
-                <li>© ParkDongHwi 2023</li>
+                <li>© ParkDongHwi 2024</li>
                 <li>All Rights reserved</li>
             </ul>
         </footer>
