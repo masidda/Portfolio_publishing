@@ -42,24 +42,24 @@ $(function() {
 }); 
 
 
-const h2 = document.querySelector('.intro .inner h2');
+// const h2 = document.querySelector('.intro .inner h2');
 
-window.addEventListener('scroll', () => {
-    // 텍스트 영역의 상단과 하단 위치 계산
-    const intro = document.querySelector('.intro');
-    const introTop = intro.getBoundingClientRect().top;
-    const introBottom = intro.getBoundingClientRect().bottom;
+// window.addEventListener('scroll', () => {
+//     // 텍스트 영역의 상단과 하단 위치 계산
+//     const intro = document.querySelector('.intro');
+//     const introTop = intro.getBoundingClientRect().top;
+//     const introBottom = intro.getBoundingClientRect().bottom;
 
-    // 현재 스크롤 위치
-    const scrollY = window.scrollY;
+//     // 현재 스크롤 위치
+//     const scrollY = window.scrollY;
 
-    // 텍스트가 영역 밖에 있는 경우 검은색으로 설정
-    if (scrollY + h2.clientHeight < introTop || scrollY > introBottom - h2.clientheight) {
-        h2.style.color = 'black';
-    } else {
-        h2.style.color = 'transparent'; // 그 외에는 투명색으로 설정
-    }
-});
+//     // 텍스트가 영역 밖에 있는 경우 검은색으로 설정
+//     if (scrollY + h2.clientHeight < introTop || scrollY > introBottom - h2.clientheight) {
+//         h2.style.color = 'black';
+//     } else {
+//         h2.style.color = 'transparent'; // 그 외에는 투명색으로 설정
+//     }
+// });
 
 
 
@@ -83,12 +83,26 @@ $(function(){
             start: "top center",
             end: "bottom center",
             scrub: true,
-            markers: true,
+            // markers: true,
             onEnter: () => gsap.to("section", {backgroundColor: color}),
             onEnterBack: () => gsap.to("section", {backgroundColor: color}),
         });
     });
 
+    // header textColor 변경
+    gsap.utils.toArray("section").forEach(function(hdColor){
+        let textColor = hdColor.getAttribute('data-textColor')
+
+        ScrollTrigger.create({
+            trigger: hdColor,
+            start: 'top center',
+            end: 'bottom top',
+            scrub: true,
+            // markers: true,
+            onEnter: () => gsap.to('header', {color:textColor}),
+            onEnterBack: () => gsap.to('header', {color: textColor})
+        })
+    })
 
     // intro h2 animation
     gsap.timeline({
@@ -119,25 +133,6 @@ $(function(){
         stagger: 1,
         duration: 1,
     }, 0)
-
-
-    // journey timeline y축 이동 animation
-    gsap.to('.journey', {
-        yPercent: -30,
-        ease: 'none',
-        duration: 1,
-        scrollTrigger: {
-            trigger: '.timeline li',
-            start: 'top center',
-            end: 'bottom 10%',
-            scrub: 1,
-            // markers: true
-        }
-    })
-
-
-
-
 
 
     // .contact text animation
